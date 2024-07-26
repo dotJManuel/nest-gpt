@@ -10,6 +10,6 @@ export class GptController {
   orthographyCheck(
     @Body() orthographyDto: OrthographyDto
   ) {
-    return orthographyDto;
+    return this.gptService.orthographyCheck(orthographyDto);
   }
 }

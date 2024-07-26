@@ -58,6 +58,13 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
+# Instalación en Dev
+
+1. Clonar el repositorio
+2. Instalar dependencias ```npm install```
+3. Crear archivo .env basado en el .env.template
+4. Ejecutar ```npm run start:dev```
+
 ## Support
 
 Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).

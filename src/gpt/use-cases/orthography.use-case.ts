@@ -1,15 +1,18 @@
+import OpenAI from "openai";
 
 interface Options {
   prompt: string;
 }
 
-export const orthographyCheckUseCase = async( options: Options) => {
+export const orthographyCheckUseCase = async( openai: OpenAI, options: Options ) => {
 
   const { prompt } = options;
 
-  return {
-    prompt: prompt,
-    apiKey: process.env.OPENAI_API_KEY
-  }
+  const completion = await openai.chat.completions.create({
+    messages: [{ role: "system", content: "You are a helpful assistant." }],
+    model: "gpt-4o-mini",
+  });
+
+  return completion.choices[0];
 
 }

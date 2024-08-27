@@ -13,7 +13,7 @@ export class GptService {
 
   private openia = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY,
-  })
+  });
 
   async orthographyCheck(orthographyDto: OrthographyDto) {
     return await orthographyCheckUseCase( this.openia, {
